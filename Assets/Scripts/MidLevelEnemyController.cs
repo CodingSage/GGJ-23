@@ -9,7 +9,7 @@ using UnityEngine;
 public class MidLevelEnemyController : MonoBehaviour
 {
     public Transform target;
-    public float movementLimitRange;
+    public float movementLimitRange = 5;
 
     private Mover mover;
     private Attacker attacker;

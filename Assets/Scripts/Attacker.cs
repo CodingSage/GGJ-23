@@ -6,17 +6,17 @@ using UnityEngine;
 public class Attacker : MonoBehaviour
 {
 
-    public float attack;
+    public float attack = 10f;
     private HashSet<Attackable> inRange;
 
     void Start()
     {
-        attack = 20f;
         inRange = new HashSet<Attackable>();
     }
 
-    public void Attack()
+    public bool Attack()
     {
+        bool attacked = false;
         List<Attackable> removeFromRange = new List<Attackable>();
         foreach (Attackable attackable in inRange)
         {
@@ -32,6 +32,8 @@ public class Attacker : MonoBehaviour
             inRange.Remove(attackable);
             attackable.DeadState();
         }
+
+        return attacked;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

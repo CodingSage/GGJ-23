@@ -5,13 +5,11 @@ using UnityEngine;
 public class Attackable : MonoBehaviour
 {
 
-    public float health;
-    public float defence;
+    public float health = 50f;
+    public float defence = 10f;
 
     void Start()
     {
-        health = 50f;
-        defence = 10f;
     }
 
     // Return true if health < 0, else return false
