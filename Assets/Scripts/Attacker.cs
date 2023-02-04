@@ -7,7 +7,6 @@ public class Attacker : MonoBehaviour
 {
 
     public float attack;
-    [SerializeField]
     private HashSet<Attackable> inRange;
 
     void Start()

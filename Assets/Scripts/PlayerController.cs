@@ -11,12 +11,14 @@ public class PlayerController : MonoBehaviour
     private Mover mover;
     private SpriteRenderer spriteRenderer;
     private Attacker attacker;
+    private Attackable attackable;
 
     void Start()
     {
         mover = GetComponent<Mover>();
         spriteRenderer = GetComponent<SpriteRenderer>();
         attacker = GetComponent<Attacker>();
+        attackable = GetComponent<Attackable>();
     }
 
     void Update()
@@ -36,9 +38,14 @@ public class PlayerController : MonoBehaviour
             mover.StopMovement();
         }
 
-        if (Input.GetKey(KeyCode.LeftControl))
+        if (Input.GetKeyDown(KeyCode.LeftControl))
         {
             attacker.Attack();
+        }
+
+        if (attackable.health <= 0)
+        {
+
         }
     }
 }
