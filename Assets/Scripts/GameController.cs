@@ -3,15 +3,17 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using TMPro;
 
 public class GameController : MonoBehaviour
 {
     public GameObject player;
-    public GameObject gameOverUi;
+    public TMP_Text narrativeText;
+    public GameObject healthDisplay;
 
     void Start()
     {
-        
+        HideText();
     }
 
     void Update()
@@ -22,6 +24,16 @@ public class GameController : MonoBehaviour
             // display game over and restart scene
             return;
         }
+    }
+
+    private void DisplayText(string text) 
+    {
+        narrativeText.text = text;
+    }
+
+    private void HideText()
+    {
+        narrativeText.text = "";
     }
 
     public void ReloadLevel()
