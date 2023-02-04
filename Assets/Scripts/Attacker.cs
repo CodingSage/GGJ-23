@@ -18,10 +18,20 @@ public class Attacker : MonoBehaviour
 
     public void Attack()
     {
+        List<Attackable> removeFromRange = new List<Attackable>();
         foreach (Attackable attackable in inRange)
         {
             Debug.Log("Dealing damage " + attack);
-            attackable.TakeDamage(attack);
+            if(attackable.TakeDamage(attack))
+            {
+                removeFromRange.Add(attackable);
+            }
+        }
+
+        foreach (Attackable attackable in removeFromRange)
+        {
+            inRange.Remove(attackable);
+            attackable.DeadState();
         }
     }
 

@@ -14,21 +14,24 @@ public class Attackable : MonoBehaviour
         defence = 10f;
     }
 
-    public void TakeDamage(float damage)
+    // Return true if health < 0, else return false
+    public bool TakeDamage(float damage)
     {
         float damageAmount = damage* defence / 100;
         health -= damageAmount;
         Debug.Log("Took damage of " + damageAmount);
         if (health < 0)
         {
-            DeadState();
+            return true;
         }
+        return false;
     }
 
-    private void DeadState()
+    public void DeadState()
     {
         // destroy object for now
         Debug.Log("Destroying attackable with health " + health);
         Destroy(gameObject);
+        // gameObject.active = false;
     }
 }
