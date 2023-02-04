@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Attackable : MonoBehaviour
 {
+
     public float health;
     public float defence;
 
@@ -26,7 +27,8 @@ public class Attackable : MonoBehaviour
 
     private void DeadState()
     {
-        // remove sprite for now
-        this.enabled = false;
+        // destroy object for now
+        Debug.Log("Destroying attackable with health " + health);
+        Destroy(gameObject);
     }
 }
