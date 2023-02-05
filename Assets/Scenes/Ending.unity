@@ -333,7 +333,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 518f26f13fc334e45aecb7c643e5a0e9, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 76f2cca77dc590b469d10e876b48a2c6, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -511,18 +511,19 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Now that I''m free, I can finally spread my roots
+  m_text: 'Now that I''m free, I can finally spread my roots, and we can grow together
 
 
-    Credits -
+    Credits
+    -
 
     Hamna
+
+    Modius
 
     Nabeel
 
     Tony
-
-    Modius
 
     Vinayak'
   m_isRightToLeft: 0
@@ -533,8 +534,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278611747
-  m_fontColor: {r: 0.13591358, g: 0.4339623, b: 0.02319921, a: 1}
+    rgba: 4278190080
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
