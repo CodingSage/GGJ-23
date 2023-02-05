@@ -64,7 +64,7 @@ public class PlayerController : MonoBehaviour
     IEnumerator AttackAnimation()
     {
         animator.SetBool("Fight", true);
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(0.25f);
         animator.SetBool("Fight", false);
     }
 
