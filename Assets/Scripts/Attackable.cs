@@ -34,8 +34,14 @@ public class Attackable : MonoBehaviour
     {
         // destroy object for now
         Debug.Log("Destroying attackable with health " + health);
-        Destroy(gameObject);
-        // gameObject.active = false;
+        if(GetComponent<PlayerController>() != null)
+        {
+            Destroy(gameObject);
+        }
+        else
+        {
+            // display restart level screen
+        }
     }
 
     public float HealthPercentage()
