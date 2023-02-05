@@ -12,6 +12,7 @@ public class PlayerController : MonoBehaviour
     private SpriteRenderer spriteRenderer;
     private Attacker attacker;
     private Attackable attackable;
+    private Vector2 originalPosition;
 
     void Start()
     {
@@ -19,14 +20,23 @@ public class PlayerController : MonoBehaviour
         spriteRenderer = GetComponent<SpriteRenderer>();
         attacker = GetComponent<Attacker>();
         attackable = GetComponent<Attackable>();
+        originalPosition = gameObject.transform.position;
     }
 
     void Update()
     {
         if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow))
         {
-            mover.MoveWithVelocity(-Vector2.right);
-            spriteRenderer.flipX = true;
+            Vector2 currentPosition = gameObject.transform.position;
+            if(currentPosition.x > originalPosition.x)
+            {
+                mover.MoveWithVelocity(-Vector2.right);
+                spriteRenderer.flipX = true;
+            }
+            else
+            {
+                mover.StopMovement();
+            }
         }
         else if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow))
         {
@@ -45,7 +55,7 @@ public class PlayerController : MonoBehaviour
 
         if (attackable.health <= 0)
         {
-
+            // display end level screen
         }
     }
 }
