@@ -57,12 +57,15 @@ public class PlayerController : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.LeftControl))
         {
             attacker.Attack();
-            animator.SetBool("Fight", true);
+            StartCoroutine(AttackAnimation());
         }
-        else
-        {
-            animator.SetBool("Fight", false);
-        }
+    }
+
+    IEnumerator AttackAnimation()
+    {
+        animator.SetBool("Fight", true);
+        yield return new WaitForSeconds(1);
+        animator.SetBool("Fight", false);
     }
 
     public bool IsAlive()
