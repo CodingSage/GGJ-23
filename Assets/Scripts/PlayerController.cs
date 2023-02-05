@@ -6,6 +6,7 @@ using UnityEngine;
 [RequireComponent(typeof(Attacker))]
 [RequireComponent(typeof(Attackable))]
 [RequireComponent(typeof(SpriteRenderer))]
+[RequireComponent(typeof(Animator))]
 public class PlayerController : MonoBehaviour
 {
     private Mover mover;
@@ -13,6 +14,7 @@ public class PlayerController : MonoBehaviour
     private Attacker attacker;
     private Attackable attackable;
     private Vector2 originalPosition;
+    private Animator animator;
 
     void Start()
     {
@@ -21,6 +23,7 @@ public class PlayerController : MonoBehaviour
         attacker = GetComponent<Attacker>();
         attackable = GetComponent<Attackable>();
         originalPosition = gameObject.transform.position;
+        animator = GetComponent<Animator>();
     }
 
     void Update()
@@ -37,20 +40,28 @@ public class PlayerController : MonoBehaviour
             {
                 mover.StopMovement();
             }
+            animator.SetBool("Walk", true);
         }
         else if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow))
         {
             mover.MoveWithVelocity(Vector2.right);
             spriteRenderer.flipX = false;
+            animator.SetBool("Walk", true);
         }
         else
         {
             mover.StopMovement();
+            animator.SetBool("Walk", false);
         }
 
         if (Input.GetKeyDown(KeyCode.LeftControl))
         {
             attacker.Attack();
+            animator.SetBool("Fight", true);
+        }
+        else
+        {
+            animator.SetBool("Fight", false);
         }
     }
 
