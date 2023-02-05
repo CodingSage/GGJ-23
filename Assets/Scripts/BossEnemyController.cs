@@ -6,6 +6,7 @@ using UnityEngine;
 [RequireComponent(typeof(Attacker))]
 [RequireComponent(typeof(Mover))]
 [RequireComponent(typeof(SpriteRenderer))]
+[RequireComponent(typeof(Animator))]
 public class BossEnemyController : MonoBehaviour
 {
     private Mover mover;
@@ -13,11 +14,13 @@ public class BossEnemyController : MonoBehaviour
     public Transform target;
     private float timer;
     private bool cooldown;
+    private Animator animator;
 
     void Start()
     {
         mover = GetComponent<Mover>();
         attacker = GetComponent<Attacker>();
+        animator = GetComponent<Animator>();
         timer = 0f;
         cooldown = false;
     }
@@ -26,19 +29,23 @@ public class BossEnemyController : MonoBehaviour
     {
         Vector2 direction = target.position - transform.position;
 
+        animator.SetBool("Walk", true);
         // Move towards target and attack. If successful, cooldown starts, and enemy pulls back till cooldown ends
         if (!cooldown)
         {
             mover.MoveWithVelocity(direction);
+            animator.SetBool("Fight", true);
             cooldown = attacker.Attack();
             if (cooldown)
             {
+                animator.SetBool("Fight", false);
                 Debug.Log("Enemy attacked, cooldown starts");
                 timer = 0f;
             }
         }
         else 
         {
+            animator.SetBool("Fight", false);
             direction = new Vector2(direction.x, -direction.y);
             mover.MoveWithVelocity(direction);
             timer += Time.deltaTime;

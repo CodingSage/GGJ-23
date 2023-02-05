@@ -1225,10 +1225,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: MidBoss
       objectReference: {fileID: 0}
-    - target: {fileID: 3197121826819368578, guid: fbb8699e991cca9468f70bf1202d4fc3, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 3197121826819368602, guid: fbb8699e991cca9468f70bf1202d4fc3, type: 3}
       propertyPath: m_RootOrder
       value: 11
@@ -1277,10 +1273,6 @@ PrefabInstance:
       propertyPath: target
       value: 
       objectReference: {fileID: 1477821159}
-    - target: {fileID: 3197121826819368603, guid: fbb8699e991cca9468f70bf1202d4fc3, type: 3}
-      propertyPath: movementLimitRange
-      value: 4
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fbb8699e991cca9468f70bf1202d4fc3, type: 3}
 --- !u!1 &1885059750

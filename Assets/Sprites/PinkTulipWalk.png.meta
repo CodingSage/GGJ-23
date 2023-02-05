@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 088618ee60af0c0469555f5ec05d7676
+guid: 524f5e197c2f8524bac6b7d7aab516e4
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -42,7 +42,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -115,7 +115,91 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: PinkTulipWalk_0
+      rect:
+        serializedVersion: 2
+        x: 155
+        y: 4905
+        width: 3098
+        height: 3432
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b060be7a888d9cb459f935474ffbfd6c
+      internalID: 1834838402
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PinkTulipWalk_1
+      rect:
+        serializedVersion: 2
+        x: 4881
+        y: 6089
+        width: 3098
+        height: 2706
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f8ef95b7c00fb92488fd6e6828f5857a
+      internalID: 109341965
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PinkTulipWalk_2
+      rect:
+        serializedVersion: 2
+        x: 155
+        y: 903
+        width: 3098
+        height: 2706
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0cb67fb0de68e594a9736f51533aea2b
+      internalID: -986353790
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PinkTulipWalk_3
+      rect:
+        serializedVersion: 2
+        x: 4881
+        y: 181
+        width: 3098
+        height: 3428
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aac3b6be006c6a9488a79cd2faae3c53
+      internalID: 1667774629
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -126,7 +210,11 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      PinkTulipWalk_2: -986353790
+      PinkTulipWalk_1: 109341965
+      PinkTulipWalk_0: 1834838402
+      PinkTulipWalk_3: 1667774629
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

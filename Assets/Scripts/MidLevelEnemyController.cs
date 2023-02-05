@@ -6,6 +6,7 @@ using UnityEngine;
 [RequireComponent(typeof(Attacker))]
 [RequireComponent(typeof(Mover))]
 [RequireComponent(typeof(SpriteRenderer))]
+[RequireComponent(typeof(Animator))]
 public class MidLevelEnemyController : MonoBehaviour
 {
     public Transform target;
@@ -17,11 +18,13 @@ public class MidLevelEnemyController : MonoBehaviour
     private float attackTimer;
     private float randomMovementTimer;
     private bool directionModifier;
+    private Animator animator;
 
     void Start()
     {
         mover = GetComponent<Mover>();
         attacker = GetComponent<Attacker>();
+        animator = GetComponent<Animator>();
         originalPosition = transform.position;
         attackTimer = 0f;
         randomMovementTimer = 0f;
@@ -55,6 +58,7 @@ public class MidLevelEnemyController : MonoBehaviour
         }
 
         mover.MoveWithVelocity(direction);
+        animator.SetBool("Walk", true);
 
         attackTimer += Time.deltaTime;
         float seconds = attackTimer % 60;
@@ -62,7 +66,12 @@ public class MidLevelEnemyController : MonoBehaviour
         {
             // attack once every 3 seconds
             attacker.Attack();
+            animator.SetBool("Fight", true);
             attackTimer = 0f;
+        }
+        else
+        {
+            animator.SetBool("Fight", false);
         }
     }
 }
