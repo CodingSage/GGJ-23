@@ -289,6 +289,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 001fa99d6cce2764db24fb84157107cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  fullHealth: 50
   health: 10
   defence: 5
 --- !u!114 &279423850
@@ -456,6 +457,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 001fa99d6cce2764db24fb84157107cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  fullHealth: 50
   health: 40
   defence: 20
 --- !u!4 &699398611
@@ -573,7 +575,7 @@ SpriteRenderer:
   m_Size: {x: 6.12, y: 4.08}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &1201284337
@@ -742,6 +744,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 001fa99d6cce2764db24fb84157107cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  fullHealth: 50
   health: 0
   defence: 0
 --- !u!4 &1490199572
@@ -827,6 +830,14 @@ PrefabInstance:
     - target: {fileID: 366699558661188724, guid: 40b3b6968b573c84c8a28702f4d06b93, type: 3}
       propertyPath: m_Name
       value: CommonObjects
+      objectReference: {fileID: 0}
+    - target: {fileID: 6184123520353271747, guid: 40b3b6968b573c84c8a28702f4d06b93, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6184123520353271747, guid: 40b3b6968b573c84c8a28702f4d06b93, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 40b3b6968b573c84c8a28702f4d06b93, type: 3}

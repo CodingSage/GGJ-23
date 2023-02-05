@@ -9,7 +9,7 @@ public class GameController : MonoBehaviour
 {
     public GameObject player;
     //public TMP_Text narrativeText;
-    public GameObject healthDisplay;
+    public Slider healthDisplay;
 
     void Start()
     {
@@ -25,7 +25,14 @@ public class GameController : MonoBehaviour
                 // display game over and restart scene
                 return;
             }
+
+            SetHealthBar(playerHealth.HealthPercentage());
         }
+    }
+
+    public void SetHealthBar(float healthVal)
+    {
+        healthDisplay.value = healthVal;
     }
 
     public void ReloadLevel()
