@@ -8,7 +8,6 @@ public class Attackable : MonoBehaviour
 
     public float fullHealth = 50f;
     public float health = 50f;
-    public float defence = 10f;
     public Slider slider;
 
     void Start()
@@ -22,9 +21,8 @@ public class Attackable : MonoBehaviour
     // Return true if health < 0, else return false
     public bool TakeDamage(float damage)
     {
-        float damageAmount = damage* defence / 100;
-        health -= damageAmount;
-        Debug.Log("Took damage of " + damageAmount);
+        health -= damage;
+        Debug.Log("Took damage of " + damage);
         if (health < 0)
         {
             return true;
