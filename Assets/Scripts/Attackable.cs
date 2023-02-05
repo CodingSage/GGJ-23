@@ -8,15 +8,6 @@ public class Attackable : MonoBehaviour
 
     public float fullHealth = 50f;
     public float health = 50f;
-    public Slider slider;
-
-    void Start()
-    {
-    }
-
-    void Update()
-    {  
-    }
 
     // Return true if health < 0, else return false
     public bool TakeDamage(float damage)
