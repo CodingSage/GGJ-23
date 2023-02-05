@@ -52,10 +52,10 @@ public class PlayerController : MonoBehaviour
         {
             attacker.Attack();
         }
+    }
 
-        if (attackable.health <= 0)
-        {
-            // display end level screen
-        }
+    public bool IsAlive()
+    {
+        return attackable.health > 0;
     }
 }

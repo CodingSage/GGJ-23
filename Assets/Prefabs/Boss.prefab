@@ -52,7 +52,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fullHealth: 50
-  health: 40
+  health: 50
   slider: {fileID: 0}
 --- !u!58 &2056521131189338420
 CircleCollider2D:

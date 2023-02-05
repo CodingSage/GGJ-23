@@ -8,11 +8,12 @@ using TMPro;
 public class GameController : MonoBehaviour
 {
     public GameObject player;
-    //public TMP_Text narrativeText;
+    public GameObject gameOverPanel;
     public Slider healthDisplay;
 
     void Start()
     {
+        gameOverPanel.SetActive(false);
     }
 
     void Update()
@@ -27,6 +28,12 @@ public class GameController : MonoBehaviour
             }
 
             SetHealthBar(playerHealth.HealthPercentage());
+
+            PlayerController playerController = player.GetComponent<PlayerController>();
+            if (!playerController.IsAlive())
+            {
+                gameOverPanel.SetActive(true);
+            }
         }
     }
 

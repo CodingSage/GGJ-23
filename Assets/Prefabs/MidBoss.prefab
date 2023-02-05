@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 3197121826819368577}
   - component: {fileID: 3197121826819368576}
   - component: {fileID: 3197121826819368603}
+  - component: {fileID: 1684908076590335147}
   m_Layer: 0
   m_Name: MidBoss
   m_TagString: Untagged
@@ -51,7 +52,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fullHealth: 50
-  health: 0
+  health: 50
   slider: {fileID: 0}
 --- !u!58 &3197121826819368604
 CircleCollider2D:
@@ -63,12 +64,12 @@ CircleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 0.66
 --- !u!114 &3197121826819368607
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -81,7 +82,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fcb175532811b7141bbfe27744634f72, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attack: 0
+  attack: 5
 --- !u!50 &3197121826819368606
 Rigidbody2D:
   serializedVersion: 4
@@ -183,3 +184,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 0}
   movementLimitRange: 5
+--- !u!70 &1684908076590335147
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3197121826819368578}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_Size: {x: 0.69, y: 1.34}
+  m_Direction: 0
